@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Review Results</title>
+</head>
+<body>
+    <h1>Review Results</h1>
+    {% if multiple_reviews %}
+        <table border="1">
+            <tr>
+                <th>Game Title</th>
+                <th>Review Text</th>
+                <th>Rating</th>
+                <th>Liked Counts</th>
+            </tr>
+            {% for review in multiple_reviews %}
+                <tr>
+                    <td>{{ review[0] }}</td>
+                    <td>{{ review[1] }}</td>
+                    <td>{{ review[2] }}</td>
+                    <td>{{ review[3] }}</td>
+                </tr>
+            {% endfor %}     
+        </table>
+        
+    {% else %}
+        <p>No reviews found matching your criteria for the game.</p>
+    {% endif %}
+</body>
+</html>

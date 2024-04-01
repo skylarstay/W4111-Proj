@@ -1,0 +1,11 @@
+<!-- templates/similar_games.html -->
+<h2>Games having the same rating type and discount to the one you entered:</h2>
+<ul>
+    {% if multiple_games %}
+        {% for game in similar_games %}
+            <li>{{ game }}</li>
+        {% endfor %}
+    {% else %}
+        <li>No games found matching.</li>
+    {% endif %}
+</ul>

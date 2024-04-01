@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Reviews</title>
+</head>
+<body>
+    <h1>Search Reviews</h1>
+    <form action="/find_reviews" method="post">
+        <label for="GameName">You want to know the reviews and ratings of what GAME (Give the official name):</label>
+        <input type="text" name="GameName" id="GameName">
+        <br>
+        <label for="P_N">You want the review to be Positive or Negative or you want all the reviews:</label>
+        <select name="P_N" id="P_N">
+            <option value="all">Don't care (All)</option>
+            <option value="Positive">Positive</option>
+            <option value="Negative">Negative</option>
+        </select>
+        <br>
+        <label for="agreed">Do you want to see the reviews agreed by lots of other users:</label>
+        <select name="agreed" id="agreed">
+            <option value="yes">Yes</option>
+            <option value="all">Doesn't matter</option>
+        </select>
+        <br>
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>

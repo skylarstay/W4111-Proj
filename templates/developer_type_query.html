@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer and Positive Ratings Percentage Query</title>
+</head>
+<body>
+    <h1>Developer and Positive Ratings Percentage Query</h1>
+    <form action="/find_developer_games" method="post">
+        <label for="developer_name">Developer Name:</label>
+        <input type="text" id="developer_name" name="developer_name" required><br><br>
+        
+        <label for="positive_rate_requirement">Positive Ratings Percentage Requirement (in percentage %):</label>
+        <input type="number" id="positive_rate_requirement" name="positive_rate_requirement" min="0" max="100" required><br><br>
+        
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>

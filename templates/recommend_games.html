@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Games</title>
+</head>
+<body>
+    <h2>Recommended Games</h2>
+
+    <h3>Games with Similar Tags:</h3>
+    {% if similar_tags_games %}
+    <ul>
+        {% for game in similar_tags_games %}
+            <li>{{ game }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No related results</p>
+    {% endif %}
+
+    <h3>Games by the Same Publisher:</h3>
+    {% if same_publisher_games %}
+    <ul>
+        {% for game in same_publisher_games %}
+            <li>{{ game }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No related results</p>
+    {% endif %}
+
+    <h3>Games by the Same Developer:</h3>
+    {% if same_developer_games %}
+    <ul>
+        {% for game in same_developer_games %}
+            <li>{{ game }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No related results</p>
+    {% endif %}
+
+    <h3>Games Played by Friends:</h3>
+    {% if friends_games %}
+    <ul>
+        {% for game in friends_games %}
+            <li>{{ game }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No related results</p>
+    {% endif %}
+
+    <h3>Games in Your Wishlist:</h3>
+    {% if wishlist_games %}
+    <ul>
+        {% for game in wishlist_games %}
+            <li>{{ game }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No related results</p>
+    {% endif %}
+
+    <h2>Games You Most Likely to Enjoy with 70% Special Discount!:</h2>
+    {% if mostLikely_like_games %}
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Original Price</th>
+                <th>Price after 70% Discount</th>
+                <th>Discount Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for game in mostLikely_like_games %}
+            <tr>
+                <td>{{ game.title }}</td>
+                <td>${{ game.original_price }}</td>
+                <td>${{ game.discounted_price }}</td>
+                <td>${{ game.discount_amount }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No related results</p>
+    {% endif %}
+</body>
+</html>

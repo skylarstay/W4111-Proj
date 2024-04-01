@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Published by Developer</title>
+</head>
+<body>
+    {% if developer_games %}
+    <h1>Games Published by {{ developer_games[0][5] }}</h1>
+    <table border="1">
+        <tr>
+            <th>Game Title</th>
+            <th>Genre</th>
+            <th>Original Price</th>
+            <th>Current Price</th>
+            <th>Positive Ratings Percentage</th>
+            <th>Developer Name</th>
+            <th>Website</th>
+        </tr>
+        {% for game in developer_games %}
+        <tr>
+            <td>{{ game[0] }}</td>
+            <td>{{ game[1] }}</td>
+            <td>{{ game[2] }}</td>
+            <td>{{ game[3] }}</td>
+            <td>{{ game[4] }}</td>
+            <td>{{ game[5] }}</td>
+            <td>{{ game[6] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No games published by this developer meet the positive ratings percentage requirement.</p>
+    {% endif %}
+</body>
+</html>

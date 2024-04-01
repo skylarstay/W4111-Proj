@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Search</title>
+</head>
+<body>
+    <h1>Find Games for Your PC</h1>
+    <form action="/find_multiple_search_games" method="post">
+        <label for="derivative">Do you want derivative games?</label>
+        <select name="derivative" id="derivative">
+            <option value="all">Don't care</option>
+            <option value="yes">Yes, only derivative games</option>
+            <option value="no">No, I don't want derivative games</option>
+        </select><br>
+
+        <label for="storage">Available storage on your PC (GB):</label>
+        <input type="number" name="storage" id="storage" step="0.01" required><br>
+
+        <label for="budget">Your budget for games ($):</label>
+        <input type="number" name="budget" id="budget" step="0.01" required><br>
+
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Games that fit your criteria and can be downloaded based on your available storage and budget:</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    {% if multiple_games %}
+        <table border="1">
+            <tr>
+                <th>Game Title</th>
+                <th>Genre</th>
+                <th>Average Rate Type</th>
+                <th>Current Price ($)</th>
+                <th>Discount</th>
+                <th>Required Storage</th>
+            </tr>
+            {% for game in multiple_games %}
+                <tr>
+                    <td>{{ game[0] }}</td>
+                    <td>{{ game[1] }}</td>
+                    <td>{{ game[2] }}</td>
+                    <td>{{ game[3] }}</td>
+                    <td>{{ game[4] }}</td>
+                    <td>{{ game[5] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No games found matching your criteria.</p>
+    {% endif %}
+</body>
+</html>
