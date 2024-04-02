@@ -6,7 +6,7 @@
 
 # Web Application URL
 
-[Link to Web Application](URL_of_Web_Application)
+
 
 # Implementation Description
 
